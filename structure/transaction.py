@@ -58,8 +58,12 @@ class Transaction:
         for entry in output:
             attrs=entry[0:3].strip()
             filename=entry[4:].strip()
+<<<<<<< HEAD
             if(len(filename.split("."))>1):
                 files[filename]=attrs
+=======
+            files[filename]=attrs
+>>>>>>> c610f470b54063c5dcad32f8e685bb4d3bf9bc71
         return files
     
     def get_user(self):
@@ -83,7 +87,11 @@ class Transaction:
             for file in self.get_files().keys():
                 msg=jsonvalid.run(self.get_file(file))[0] or xmlvalid.run(self.get_file(file))[0]
                 exitCode=jsonvalid.run(self.get_file(file))[1] or xmlvalid.run(self.get_file(file))[1]
+<<<<<<< HEAD
             return (msg,exitCode)
+=======
+                return (msg,exitCode)
+>>>>>>> c610f470b54063c5dcad32f8e685bb4d3bf9bc71
     
         
         
